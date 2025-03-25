@@ -256,6 +256,12 @@
             border-radius: 0 8px 8px 0;
         }
         
+        .image-caption {
+            font-style: italic;
+            color: #555;
+            margin-top: 10px;
+        }
+        
         /* Multi-video grid layout */
         .video-grid {
             display: grid;
@@ -294,6 +300,27 @@
             margin-top: 5px;
         }
         
+        /* Updated info-button style for a smaller, aesthetic, black "i" */
+        .info-button {
+            font-size: 0.8em;
+            color: black;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            padding: 2px 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .info-box {
+            display: none;
+            background: #fffae6;
+            padding: 10px;
+            border-left: 4px solid var(--accent-color);
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 width: 95%;
@@ -326,7 +353,7 @@
     </div>
     
     <div class="container">
-        
+        <!-- Module 1: Introduction -->
         <div class="module">
             <div class="module-title" id="module1-title">Module 1: Introduction</div>
             <div id="module1" class="module-content">
@@ -339,16 +366,21 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
+                <!-- Added info button for Module 1 -->
+                <button class="info-button" onclick="showInfo(event, 'info1')">i</button>
+                <div class="info-box" id="info1">Source: Video credits go to [Original Creator Name]</div>
                 <div class="video-controls">
                     <button class="btn fullscreen-btn" onclick="toggleFullscreen('video1')" aria-label="Toggle fullscreen for introduction video">
-                        <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
                         Toggle Fullscreen
                     </button>
                 </div>
             </div>
         </div>
         
-        
+        <!-- Module 2: Schematic Design -->
         <div class="module">
             <div class="module-title" id="module2-title">Module 2: Schematic Design</div>
             <div id="module2" class="module-content">
@@ -363,9 +395,14 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
+                    <!-- Added info button for Module 2 -->
+                    <button class="info-button" onclick="showInfo(event, 'info2')">i</button>
+                    <div class="info-box" id="info2">Source: Video credits go to [Original Creator Name]</div>
                     <div class="video-controls">
                         <button class="btn fullscreen-btn" onclick="toggleFullscreen('video2-1')" aria-label="Toggle fullscreen for schematic design video">
-                            <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                            </svg>
                             Toggle Fullscreen
                         </button>
                     </div>
@@ -385,7 +422,7 @@
             </div>
         </div>
         
-        
+        <!-- Module 3: PCB Layout -->
         <div class="module">
             <div class="module-title" id="module3-title">Module 3: PCB Layout</div>
             <div id="module3" class="module-content">
@@ -393,57 +430,15 @@
                     Master the techniques of PCB layout, including layer management, routing strategies, and design rule considerations.
                 </div>
                 
-                <div class="video-section">
-                    <div class="video-container">
-                        <video id="video3-1" controls>
-                            <source src="videos/pcb_layout.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="video-controls">
-                        <button class="btn fullscreen-btn" onclick="toggleFullscreen('video3-1')" aria-label="Toggle fullscreen for PCB layout video">
-                            <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
-                            Toggle Fullscreen
-                        </button>
-                    </div>
+                <div class="photo-container">
+                    <img src="images/pcb_layout.jpg" alt="PCB Layout Image">
                 </div>
                 
-                <h3 class="section-title">Layer Management</h3>
-                <div class="video-grid">
-                    <div class="video-card">
-                        <div class="video-title">Two-Layer Boards <span class="video-label">Basic</span></div>
-                        <div class="video-container">
-                            <video id="video3-2" controls>
-                                <source src="videos/two_layer_design.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="video-controls">
-                            <button class="btn fullscreen-btn" onclick="toggleFullscreen('video3-2')" aria-label="Toggle fullscreen for two-layer board video">
-                                <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
-                                Toggle Fullscreen
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="video-card">
-                        <div class="video-title">Multi-Layer Boards <span class="video-label">Advanced</span></div>
-                        <div class="video-container">
-                            <video id="video3-3" controls>
-                                <source src="videos/multi_layer_design.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="video-controls">
-                            <button class="btn fullscreen-btn" onclick="toggleFullscreen('video3-3')" aria-label="Toggle fullscreen for multi-layer board video">
-                                <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
-                                Toggle Fullscreen
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <p class="image-caption">PCB (Printed Circuit Board) layout involves designing the physical arrangement of components and conductive traces on a board to form an electrical circuit. It's a crucial step in electronic product design, ensuring functionality and meeting performance requirements. </p>
             </div>
         </div>
+        
+        
         <div class="module">
             <div class="module-title" id="module4-title">Module 4: Component Selection</div>
             <div id="module4" class="module-content">
@@ -458,9 +453,14 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
+                    <!-- Added info button for Module 4 -->
+                    <button class="info-button" onclick="showInfo(event, 'info4')">i</button>
+                    <div class="info-box" id="info4">Source: Video credits go to [Original Creator Name]</div>
                     <div class="video-controls">
                         <button class="btn fullscreen-btn" onclick="toggleFullscreen('video4-1')" aria-label="Toggle fullscreen for component selection video">
-                            <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                            </svg>
                             Toggle Fullscreen
                         </button>
                     </div>
@@ -480,29 +480,14 @@
                 </div>
             </div>
         </div>
+        
+        
         <div class="module">
             <div class="module-title" id="module5-title">Module 5: Soldering Techniques</div>
             <div id="module5" class="module-content">
                 <div class="module-description">
                     Master various soldering techniques for both SMD and through-hole components, including tools, materials, and professional methods.
                 </div>
-                
-                <h3 class="section-title">Soldering Fundamentals</h3>
-                <div class="video-section">
-                    <div class="video-container">
-                        <video id="video5-1" controls>
-                            <source src="videos/soldering_fundamentals.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="video-controls">
-                        <button class="btn fullscreen-btn" onclick="toggleFullscreen('video5-1')" aria-label="Toggle fullscreen for soldering fundamentals video">
-                            <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
-                            Toggle Fullscreen
-                        </button>
-                    </div>
-                </div>
-                
                 <h3 class="section-title">Advanced Soldering Techniques</h3>
                 <div class="video-grid">
                     <div class="video-card">
@@ -513,9 +498,14 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
+                        <!-- "i" button for SMD soldering -->
+                        <button class="info-button" onclick="showInfo(event, 'info5-2')">i</button>
+                        <div class="info-box" id="info5-2">Source: Video credits go to [Original Creator Name]</div>
                         <div class="video-controls">
                             <button class="btn fullscreen-btn" onclick="toggleFullscreen('video5-2')" aria-label="Toggle fullscreen for SMD soldering video">
-                                <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                                </svg>
                                 Toggle Fullscreen
                             </button>
                         </div>
@@ -529,34 +519,23 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
+                        <!-- "i" button for through-hole soldering -->
+                        <button class="info-button" onclick="showInfo(event, 'info5-3')">i</button>
+                        <div class="info-box" id="info5-3">Source: Video credits go to [Original Creator Name]</div>
                         <div class="video-controls">
                             <button class="btn fullscreen-btn" onclick="toggleFullscreen('video5-3')" aria-label="Toggle fullscreen for through-hole soldering video">
-                                <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                                </svg>
                                 Toggle Fullscreen
                             </button>
                         </div>
                     </div>
                 </div>
-                
-                <div class="video-card">
-                    <div class="video-title">Rework Techniques <span class="video-label">Troubleshooting</span></div>
-                    <div class="video-container">
-                        <video id="video5-4" controls>
-                            <source src="videos/rework_techniques.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="video-controls">
-                        <button class="btn fullscreen-btn" onclick="toggleFullscreen('video5-4')" aria-label="Toggle fullscreen for rework techniques video">
-                            <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
-                            Toggle Fullscreen
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
         
-        <!-- Module 6: Testing (unchanged) -->
+        
         <div class="module">
             <div class="module-title" id="module6-title">Module 6: Testing</div>
             <div id="module6" class="module-content">
@@ -654,6 +633,13 @@
                 });
             });
         });
+        
+        // Toggle info box display on "i" button click
+        function showInfo(event, id) {
+            event.stopPropagation();
+            const infoBox = document.getElementById(id);
+            infoBox.style.display = infoBox.style.display === "block" ? "none" : "block";
+        }
     </script>
 </body>
 </html>
