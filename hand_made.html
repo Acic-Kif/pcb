@@ -300,7 +300,7 @@
             text-align: left;
         }
         
-        /* Multi-video grid layout */
+       
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -338,7 +338,7 @@
             margin-top: 5px;
         }
         
-        /* New CSS rule to align bullet points in materials-list */
+     
         .materials-list ul {
             list-style-position: inside;
             margin-left: 20px;
@@ -377,7 +377,7 @@
     </div>
     
     <div class="container">
-        <!-- Module 1: Introduction to Handmade PCBs -->
+       
         <div class="module">
             <div class="module-title" id="module1-title">Module 1: Introduction to Handmade PCBs</div>
             <div id="module1" class="module-content">
@@ -390,10 +390,10 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <!-- Added "i" button for Module 1 under the video -->
+                
                 <button class="info-button" onclick="showInfo(event, 'info1')">i</button>
                 <div class="info-box" id="info1">Source: https://youtu.be/YJr-kHy6STg?si=ftY-Fm1UaeduFEe8</div>
-                <!-- Video description for Module 1 -->
+               
                 <div class="video-description">
                     <p>This video provides an overview of handmade PCB design and introduces the unique techniques involved in crafting them manually.</p>
                 </div>
@@ -406,7 +406,7 @@
             </div>
         </div>
         
-        <!-- Module 2: Drilling process -->
+ 
         <div class="module">
             <div class="module-title" id="module2-title">Module 2: Drilling process</div>
             <div id="module2" class="module-content">
@@ -431,11 +431,11 @@
                         <source src="videos/pcb_drilling.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <!-- "i" button for Module 2 positioned at bottom-right of the video -->
+                    
                     <button class="info-button" onclick="showInfo(event, 'info2')">i</button>
                 </div>
                 <div class="info-box" id="info2">Source: https://youtu.be/dip-fORG5Sc?si=NqbG-OD0mUen3Mla</div>
-                <!-- Video description for Module 2 -->
+               
                 <div class="video-description">
                     <p>This video demonstrates the drilling process in handmade PCB creation, focusing on the proper technique and tool handling for precision drilling.</p>
                 </div>
@@ -448,7 +448,7 @@
             </div>
         </div>
         
-        <!-- Module 3: Electroplating -->
+       
         <div class="module">
             <div class="module-title" id="module3-title">Module 3: Electroplating</div>
             <div id="module3" class="module-content">
@@ -517,7 +517,7 @@
             </div>
         </div>
         
-        <!-- Module 5: Chemical Processing -->
+       
         <div class="module">
             <div class="module-title" id="module5-title">Module 5: Chemical Processing</div>
             <div id="module5" class="module-content">
@@ -534,7 +534,7 @@
             </div>
         </div>
         
-        <!-- Module 6: Soldering and Testing -->
+      
         <div class="module">
             <div class="module-title" id="module6-title">Module 6: Soldering and Testing</div>
             <div id="module6" class="module-content">
@@ -561,16 +561,14 @@
             });
         });
         
-        // Toggle module content visibility
+     
         document.querySelectorAll('.module-title').forEach(title => {
             title.addEventListener('click', function() {
                 const moduleId = this.id.replace('-title', '');
                 const content = document.getElementById(moduleId);
-                
-                // Toggle the active class for the arrow rotation
+
                 this.classList.toggle('active');
                 
-                // Toggle the display of the content
                 if (content.style.display === "block") {
                     content.style.display = "none";
                 } else {
@@ -579,7 +577,7 @@
             });
         });
         
-        // Toggle fullscreen for videos with error checking
+        
         function toggleFullscreen(videoId) {
             const video = document.getElementById(videoId);
             
@@ -591,17 +589,17 @@
             if (!document.fullscreenElement) {
                 if (video.requestFullscreen) {
                     video.requestFullscreen();
-                } else if (video.webkitRequestFullscreen) { /* Safari */
+                } else if (video.webkitRequestFullscreen) { 
                     video.webkitRequestFullscreen();
-                } else if (video.msRequestFullscreen) { /* IE11 */
+                } else if (video.msRequestFullscreen) {
                     video.msRequestFullscreen();
                 }
             } else {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) { /* Safari */
+                } else if (document.webkitExitFullscreen) { 
                     document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) { /* IE11 */
+                } else if (document.msExitFullscreen) { 
                     document.msExitFullscreen();
                 }
             }
