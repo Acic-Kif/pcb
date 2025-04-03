@@ -193,6 +193,44 @@
         .form-section .btn:hover {
             background-color: #b00029;
         }
+        
+        /* Learning Objectives Styles */
+        .learning-objectives {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .learning-objectives h2 {
+            color: #D80032;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 28px;
+        }
+        
+        .objectives-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .objectives-list li {
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            background-color: white;
+            border-left: 4px solid #D80032;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            font-size: 18px;
+            line-height: 1.5;
+            transition: transform 0.3s ease;
+        }
+        
+        .objectives-list li:hover {
+            transform: translateX(10px);
+        }
 
         @media (max-width: 768px) {
             .panels-container {
@@ -203,6 +241,15 @@
             .panel {
                 height: 40vh;
                 margin: 10px 0;
+            }
+            
+            .learning-objectives {
+                padding: 20px;
+            }
+            
+            .objectives-list li {
+                font-size: 16px;
+                padding: 12px 15px;
             }
         }
     </style>
@@ -230,6 +277,15 @@
         
     </section>
     
+    <!-- Learning Objectives Section -->
+    <div class="container learning-objectives">
+        <h2>Learning Objectives</h2>
+        <ul class="objectives-list">
+            <li>Understand the fundamental components and materials used in PCB design and manufacturing</li>
+            <li>Compare the differences between machine-made and handmade PCB fabrication techniques and their applications</li>
+            <li>Develop practical skills to design, create, and troubleshoot basic printed circuit boards</li>
+        </ul>
+    </div>
     
     <div class="panels-container">
         <div class="panel active" style="background-image: url('https://images.pexels.com/photos/3520665/pexels-photo-3520665.jpeg?auto=compress&cs=tinysrgb&w=600')">
