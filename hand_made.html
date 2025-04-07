@@ -278,7 +278,7 @@
             text-align: left;
         }
         
-        /* Styles for info button and info box */
+        
         .info-button {
             font-size: 0.8em;
             color: black;
@@ -413,9 +413,30 @@
                 <div class="module-description">
                     Explore the essential tools and materials needed for creating handmade PCBs. Learn how to select the right components for your projects.
                 </div>
-                <div class="materials-list">
+                
+                <div class="video-container module2-info">
+                    <video id="video2" controls>
+                        <source src="videos/pcb_drilling.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="info-button" onclick="showInfo(event, 'info2')">i</button>
+                </div>
+                <div class="info-box" id="info2">Source: https://youtu.be/dip-fORG5Sc?si=NqbG-OD0mUen3Mla</div>
+               
+                <div class="video-description">
+                    <p>This video demonstrates the drilling process in handmade PCB creation, focusing on the proper technique and tool handling for precision drilling.</p>
+                </div>
+                
+                <div class="video-controls">
+                    <button class="btn fullscreen-btn" onclick="toggleFullscreen('video2')" aria-label="Toggle fullscreen for drilling process video">
+                        <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+                        Toggle Fullscreen
+                    </button>
+                </div>
+                
+                <div class="photo-description">
                     <h3>Essential Tools & Materials</h3>
-                    <ul>
+                    <ul style="text-align: left;">
                         <li>Copper clad board (single or double-sided)</li>
                         <li>Ferric chloride or other etching solution</li>
                         <li>Permanent markers or transfer paper</li>
@@ -426,24 +447,17 @@
                         <li>Multimeter for testing</li>
                     </ul>
                 </div>
-                <div class="video-container module2-info">
-                    <video id="video2" controls>
-                        <source src="videos/pcb_drilling.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    
-                    <button class="info-button" onclick="showInfo(event, 'info2')">i</button>
-                </div>
-                <div class="info-box" id="info2">Source: https://youtu.be/dip-fORG5Sc?si=NqbG-OD0mUen3Mla</div>
-               
-                <div class="video-description">
-                    <p>This video demonstrates the drilling process in handmade PCB creation, focusing on the proper technique and tool handling for precision drilling.</p>
-                </div>
-                <div class="video-controls">
-                    <button class="btn fullscreen-btn" onclick="toggleFullscreen('video2')" aria-label="Toggle fullscreen for drilling process video">
-                        <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
-                        Toggle Fullscreen
-                    </button>
+                
+                <div class="photo-description">
+                    <h3>Drilling Techniques</h3>
+                    <p>Proper drilling is crucial for successful PCB creation. Follow these guidelines:</p>
+                    <ul style="text-align: left;">
+                        <li>Use a drill press or hand drill with appropriate speed control</li>
+                        <li>Select the correct drill bit size for component leads</li>
+                        <li>Secure the PCB firmly to prevent movement during drilling</li>
+                        <li>Apply gentle pressure to avoid breaking the bits</li>
+                        <li>Wear safety glasses to protect from copper debris</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -459,8 +473,16 @@
                     <img src="images/electroplating.jpg" alt="Electroplating Process" />
                 </div>
                 <div class="photo-description">
-                    <h3>Electroplating in PCB Manufacturing</h3>
-                    <p>Electroplating is a crucial process in PCB production that involves depositing a thin metal layer onto the circuit board to improve conductivity, protect the surface, and enhance overall performance.</p>
+                    <h3>The Electroplating Process</h3>
+                    <p>PCB electroplating involves these key steps:</p>
+                    <ol style="text-align: left;">
+                        <li>Cleaning the copper board surface thoroughly</li>
+                        <li>Preparing the electroplating solution (usually copper sulfate)</li>
+                        <li>Setting up the electroplating circuit with the PCB as the cathode</li>
+                        <li>Maintaining consistent current density for even deposition</li>
+                        <li>Rinsing and inspecting the plated board</li>
+                    </ol>
+                    <p>This process strengthens through-hole connections and improves board conductivity.</p>
                 </div>
             </div>
         </div>
@@ -517,7 +539,6 @@
             </div>
         </div>
         
-       
         <div class="module">
             <div class="module-title" id="module5-title">Module 5: Chemical Processing</div>
             <div id="module5" class="module-content">
@@ -528,8 +549,30 @@
                     <img src="images/chemical_processing.jpg" alt="PCB Chemical Processing" />
                 </div>
                 <div class="photo-description">
-                    <h3>Chemical Processing Techniques</h3>
-                    <p>Chemical processing is critical in PCB manufacturing, involving various treatments to prepare and enhance the circuit board's performance and durability.</p>
+                    <h3>Chemical Processes in PCB Manufacturing</h3>
+                    <p>Common chemical processes include etching, cleaning, and applying solder mask. Each step requires careful control of chemical concentration, temperature, and timing.</p>
+                </div>
+                
+                <div class="photo-description">
+                    <h3>Advantages of Chemical Processing</h3>
+                    <ul style="text-align: left;">
+                        <li>High precision in circuit pattern creation</li>
+                        <li>Ability to create complex designs with fine details</li>
+                        <li>Consistent results when procedures are followed correctly</li>
+                        <li>Cost-effective for small to medium batch production</li>
+                        <li>Versatility in creating different types of PCBs</li>
+                    </ul>
+                </div>
+                
+                <div class="photo-description">
+                    <h3>Disadvantages of Chemical Processing</h3>
+                    <ul style="text-align: left;">
+                        <li>Potential environmental hazards from chemical waste</li>
+                        <li>Requires careful handling and safety precautions</li>
+                        <li>Time-consuming process with multiple steps</li>
+                        <li>Risk of over-etching or under-etching</li>
+                        <li>Chemical shelf-life and disposal considerations</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -545,8 +588,27 @@
                     <img src="images/soldering_and_testing.jpg" alt="PCB Soldering and Testing" />
                 </div>
                 <div class="photo-description">
-                    <h3>Soldering and Circuit Testing</h3>
-                    <p>The final stage of PCB manufacturing involves precise soldering of components and comprehensive testing to ensure circuit functionality.</p>
+                    <h3>Effective Soldering Techniques</h3>
+                    <p>For successful PCB assembly, follow these soldering tips:</p>
+                    <ul style="text-align: left;">
+                        <li>Use the appropriate soldering iron temperature (300-350°C for most components)</li>
+                        <li>Clean the soldering iron tip regularly using a damp sponge</li>
+                        <li>Apply solder to the pad and component lead simultaneously</li>
+                        <li>Hold components in place with tweezers or tape while soldering</li>
+                        <li>Inspect joints for proper wetting and avoid cold solder joints</li>
+                    </ul>
+                </div>
+                
+                <div class="photo-description">
+                    <h3>Testing Your Finished PCB</h3>
+                    <p>Verify your PCB's functionality with these testing methods:</p>
+                    <ul style="text-align: left;">
+                        <li>Visual inspection for solder bridges or missing connections</li>
+                        <li>Continuity testing with a multimeter</li>
+                        <li>Power-on testing with current limiting protection</li>
+                        <li>Signal testing at test points</li>
+                        <li>Functional testing with the intended application</li>
+                    </ul>
                 </div>
             </div>
         </div>
